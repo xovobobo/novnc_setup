@@ -2,7 +2,8 @@
 
 VNC_PASSWORD="vnc123"
 
-base_setup_file=$PWD/../.base/setup.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+base_setup_file=$SCRIPT_DIR/../.base/setup.sh
 
 source $base_setup_file
 
