@@ -4,7 +4,7 @@
 DISPLAY="${1:-"1"}"
 VNC_SHARED_PORT="${2:-"8080"}"
 
-VNC_LOCAL_PORT=590${DISPLAY}
+VNC_LOCAL_PORT=$((5900 + DISPLAY))
 
 cleanup() {
   echo "Cleanup..."
