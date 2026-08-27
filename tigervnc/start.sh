@@ -15,7 +15,7 @@ trap cleanup EXIT
 
 XSTARTUP_FILE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/xstartup"
 cleanup
-vncserver :${DISPLAY} -xstartup $XSTARTUP_FILE
+vncserver :${DISPLAY} -xstartup $XSTARTUP_FILE -localhost no
 /opt/novnc/utils/novnc_proxy --listen ${VNC_SHARED_PORT} --vnc localhost:590${DISPLAY}
 
 wait

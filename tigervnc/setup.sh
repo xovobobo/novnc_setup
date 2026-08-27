@@ -7,7 +7,7 @@ base_setup_file=$SCRIPT_DIR/../.base/setup.sh
 
 source $base_setup_file
 
-apt install -y tigervnc-standalone-server
+apt install -y tigervnc-standalone-server tigervnc-tools
 
 echo $VNC_PASSWORD | vncpasswd -f > ~/.vnc/passwd
 chmod 600 ~/.vnc/passwd
